@@ -22,6 +22,8 @@ const App = () => {
     try {
       const response = await axios.get(baseURL);
       setItems(response.data);
+      setError(null);
+      
     } catch (error) {
       console.error('Error fetching items:', error);
       setError('Error fetching items');
